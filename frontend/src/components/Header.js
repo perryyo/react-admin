@@ -1,18 +1,31 @@
 import React, { Component } from 'react';
-
+import $ from 'jquery';
 import '../public/Header/Header.css';
 import HeaderLogo from '../public/Header/HeaderLogo.png';
 import { FaBars } from 'react-icons/fa';
 import IconA from '../public/Header/a0.png';
 
 class Header extends Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      loginId: '',
+      loginPw: '',
+    };
+  }
+
+  hello() {
+    alert(333);
+  }
+
   render() {
     return (
       <div>
           <header>
             <div className='header-container'>
 
-                <div className='header-hamberger-menu'>
+                <div onClick={this.hello} className='header-hamberger-menu'>
                     <FaBars />
                 </div>
 

@@ -8,7 +8,7 @@
 }
 
 .header-logo-container{
-    display: inline-block;    
+    display: inline-block;
 }
 
 .header-logo {
@@ -48,6 +48,7 @@
 .header-profile-box-level{
     font-size: 80%;
     color: #868e96;
+    font-family: 'Ubuntu', sans-serif;
 }
 
 .header-logout-button{
@@ -64,6 +65,12 @@
     font-size: 90%;
     padding-right: 10px;
     padding-left: 10px;
+    font-family: 'Ubuntu', sans-serif;
+    transition: 1s;
+}
+
+.header-logout-button:hover{
+  background-color: #8199e6;
 }
 
 .header-hamberger-menu{
@@ -73,6 +80,7 @@
     padding: 14px;
     margin-left: 10px;
     display: none;
+    cursor: pointer;
 }
 
 @media only screen and (max-width: 992px) {
