@@ -10,7 +10,7 @@ class Login extends Component {
     super(props);
     this.state = {
       loginId: '',
-      loginPw: ''
+      loginPw: '',
     };
 
     this.handleChangeId = this.handleChangeId.bind(this);
@@ -19,16 +19,16 @@ class Login extends Component {
   }
 
   handleChangeId(event) {
-    this.setState({loginId: event.target.value});
+    this.setState({ loginId: event.target.value });
   }
 
   handleChangePw(event) {
-    this.setState({loginPw: event.target.value});
+    this.setState({ loginPw: event.target.value });
   }
 
   handleSubmit() {
-    console.log("this.loginId -> ", this.state.loginId);
-    console.log("this.loginPw -> ", this.state.loginPw);
+    console.log('this.loginId -> ', this.state.loginId);
+    console.log('this.loginPw -> ', this.state.loginPw);
   }
 
   render() {
@@ -45,7 +45,7 @@ class Login extends Component {
               label="Username"
               type="text"
               margin="normal"
-              value={this.state.loginId} 
+              value={this.state.loginId}
               onChange={this.handleChangeId}
             />
           </div>
@@ -55,7 +55,7 @@ class Login extends Component {
               label="Password"
               type="password"
               margin="normal"
-              value={this.state.loginPw} 
+              value={this.state.loginPw}
               onChange={this.handleChangePw}
             />
           </div>
