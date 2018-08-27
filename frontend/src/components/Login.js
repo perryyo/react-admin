@@ -85,11 +85,6 @@ class Login extends Component {
           </div>
 
         </div>
-
-        <h5>DEBUG -> loginId</h5>
-        <h5>{this.state.loginId}</h5>
-        <h5>DEBUG -> loginPw</h5>
-        <h5>{this.state.loginPw}</h5>
       </div>
     );
   }
