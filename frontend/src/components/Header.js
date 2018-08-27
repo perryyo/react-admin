@@ -8,22 +8,11 @@ const $ = require('jquery');
 
 class Header extends Component {
 
-  constructor(props) {
-    super(props);
-    this.state = {
-    };
-  }
-
-  hello() {
-    console.log('start -----> ');
+  handleHamberger() {
     $('.sidebar-container').addClass("mobile-sidebar-width");
     $('.sidebar-title').addClass("mobile-sidebar-display");
     $('.sidebar-menu').addClass("mobile-sidebar-display");
     $('.sidebar-cancel').addClass("mobile-sidebar-display");
-
-    //.addClass( "myClass yourClass" );
-
-    console.log('end -----> ');
   }
 
   render() {
@@ -33,7 +22,7 @@ class Header extends Component {
           <header>
             <div className='header-container'>
 
-                <div onClick={this.hello} className='header-hamberger-menu'>
+                <div onClick={this.handleHamberger} className='header-hamberger-menu'>
                     <FaBars />
                 </div>
 

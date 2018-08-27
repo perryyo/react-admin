@@ -17,7 +17,6 @@
   color: #868e96;
   padding: 10px;
   font-family: 'Ubuntu', sans-serif;
-  margin-top: 68px;
 }
 
 .sidebar-menu{
@@ -61,7 +60,7 @@
     margin-right: 15px;
     font-size: 220%;
     margin-top: 20px;
-    display: none;
+    cursor: pointer;
 }
 
 .mobile-sidebar-width{
