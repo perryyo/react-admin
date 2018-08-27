@@ -6,6 +6,31 @@ import Button from '@material-ui/core/Button';
 import loginLogo from '../public/Login/loginLogo.png';
 
 class Login extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      loginId: '',
+      loginPw: ''
+    };
+
+    this.handleChangeId = this.handleChangeId.bind(this);
+    this.handleChangePw = this.handleChangePw.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  handleChangeId(event) {
+    this.setState({loginId: event.target.value});
+  }
+
+  handleChangePw(event) {
+    this.setState({loginPw: event.target.value});
+  }
+
+  handleSubmit() {
+    console.log("this.loginId -> ", this.state.loginId);
+    console.log("this.loginPw -> ", this.state.loginPw);
+  }
+
   render() {
     return (
       <div>
@@ -20,6 +45,8 @@ class Login extends Component {
               label="Username"
               type="text"
               margin="normal"
+              value={this.state.loginId} 
+              onChange={this.handleChangeId}
             />
           </div>
           <div className="login-password-container">
@@ -28,6 +55,8 @@ class Login extends Component {
               label="Password"
               type="password"
               margin="normal"
+              value={this.state.loginPw} 
+              onChange={this.handleChangePw}
             />
           </div>
 
@@ -35,12 +64,18 @@ class Login extends Component {
             <Button
               variant="contained"
               color="primary"
+              onClick={this.handleSubmit}
             >
             Login
             </Button>
           </div>
 
         </div>
+
+        <h5>DEBUG -> loginId</h5>
+        <h5>{this.state.loginId}</h5>
+        <h5>DEBUG -> loginPw</h5>
+        <h5>{this.state.loginPw}</h5>
       </div>
     );
   }
