@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 
 import '../public/Login/Login.css';
 import TextField from '@material-ui/core/TextField';
@@ -29,6 +30,20 @@ class Login extends Component {
   handleSubmit() {
     console.log('this.loginId -> ', this.state.loginId);
     console.log('this.loginPw -> ', this.state.loginPw);
+
+    const payload = {
+      email: this.state.loginId,
+      password: this.state.loginPw,
+    };
+
+    axios.post('http://127.0.0.1:8000/api/hello', { payload })
+      .then((res) => {
+        if (res.data.token === 'fail') {
+          console.log('login fail');
+        } else {
+          localStorage.setItem('token', res.data.token);
+        }
+      });
   }
 
   render() {
@@ -42,7 +57,7 @@ class Login extends Component {
           <div className="login-id-container">
             <TextField
               id="login-input-id"
-              label="Username"
+              label="Eamil"
               type="text"
               margin="normal"
               value={this.state.loginId}

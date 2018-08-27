@@ -6,8 +6,17 @@
   height: 360px;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 230px;
+  margin-top: 180px;
   box-shadow: 4px 4px 10px #dddddd;
+
+  position: relative;
+  animation-name: ani_downup;
+  animation-duration: 1s;
+}
+
+@keyframes ani_downup {
+  0%   {top:50px;}
+  100% {top:0px;}
 }
 
 .login-logo-container {
