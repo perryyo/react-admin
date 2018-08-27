@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { FaBars, FaAddressBook, FaCalendarCheck} from 'react-icons/fa';
+import { FaBars, FaAddressBook, FaCalendarCheck, FaTimes} from 'react-icons/fa';
 
 import '../public/SideBar/SideBar.css';
 
@@ -7,6 +7,9 @@ class SideBar extends Component {
   render() {
     return (
       <div className="sidebar-container">
+        <div className="sidebar-cancel">
+          <FaTimes />
+        </div>
         <div className="sidebar-title">
           Menu
         </div>

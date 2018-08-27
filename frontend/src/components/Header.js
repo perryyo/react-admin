@@ -1,25 +1,33 @@
 import React, { Component } from 'react';
-import $ from 'jquery';
 import '../public/Header/Header.css';
-import HeaderLogo from '../public/Header/HeaderLogo.png';
 import { FaBars } from 'react-icons/fa';
+import HeaderLogo from '../public/Header/HeaderLogo.png';
 import IconA from '../public/Header/a0.png';
+
+const $ = require('jquery');
 
 class Header extends Component {
 
   constructor(props) {
     super(props);
     this.state = {
-      loginId: '',
-      loginPw: '',
     };
   }
 
   hello() {
-    alert(333);
+    console.log('start -----> ');
+    $('.sidebar-container').addClass("mobile-sidebar-width");
+    $('.sidebar-title').addClass("mobile-sidebar-display");
+    $('.sidebar-menu').addClass("mobile-sidebar-display");
+    $('.sidebar-cancel').addClass("mobile-sidebar-display");
+
+    //.addClass( "myClass yourClass" );
+
+    console.log('end -----> ');
   }
 
   render() {
+
     return (
       <div>
           <header>

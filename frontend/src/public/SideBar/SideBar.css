@@ -10,13 +10,14 @@
     z-index: 1030;
     opacity: 1;
     min-height: 100vh;
+    transition: 1s;
 }
 
 .sidebar-title{
-  margin-top: 68px;
   color: #868e96;
   padding: 10px;
   font-family: 'Ubuntu', sans-serif;
+  margin-top: 68px;
 }
 
 .sidebar-menu{
@@ -37,6 +38,7 @@
   padding-bottom: 15px;
   border-radius: 5px;
   transition: 1s;
+  cursor: pointer
 }
 
 .sidebar-menu li:hover{
@@ -53,6 +55,23 @@
   color: #eeeeee;
 }
 
+.sidebar-cancel{
+    color: #eeeeee;
+    text-align: right;
+    margin-right: 15px;
+    font-size: 220%;
+    margin-top: 20px;
+    display: none;
+}
+
+.mobile-sidebar-width{
+  width: 280px !important;
+}
+
+.mobile-sidebar-display{
+  display: block !important;
+}
+
 @media only screen and (max-width: 992px) {
     .sidebar-container {
       z-index: 9999;
@@ -60,8 +79,15 @@
     }
     .sidebar-title{
       display: none;
+      margin-top: 10px;
     }
     .sidebar-menu{
       display: none;
+    }
+    .sidebar-cancel{
+      display: none;
+    }
+    .sidebar-menu-title{
+      font-size: 180%;
     }
 }
