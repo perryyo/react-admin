@@ -1,0 +1,19 @@
+.sidebar-container{
+    border: 1px solid black;
+    min-height: calc(100vh - 3.5rem);
+    background-color: #19222d;
+    width: 14rem;
+    display: block;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    position: relative;
+    z-index: 1030;
+    opacity: 1;
+    min-height: 100vh;
+}
+
+@media only screen and (max-width: 992px) {
+    .sidebar-container {
+        display: none;
+    }
+}
