@@ -2,6 +2,8 @@ from rest_framework.generics import CreateAPIView
 from .serializers import JwtSerializer
 from rest_framework.response import Response
 
+from api.models import AuthUser
+
 import jwt
 
 class JwtViews(CreateAPIView):
@@ -10,6 +12,8 @@ class JwtViews(CreateAPIView):
 
     def create(self, request):
         
+        print(AuthUser.objects.get(email='honor@example.com'))
+
         id = 'hello'
         pw = '123'
 

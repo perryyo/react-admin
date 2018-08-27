@@ -6,7 +6,7 @@ SECRET_KEY = 'mgyxt)f1d(utbg%^4y8lf#wr_0hc!vj(ndd)0*i!w*+n=81!!c'
 
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -41,7 +41,8 @@ REST_FRAMEWORK = {
 }
 
 CORS_ORIGIN_WHITELIST = (
-    #'localhost:3000',
+    'localhost:3000',
+    '127.0.0.1:3000',
 )
 
 ROOT_URLCONF = 'backend.urls'
@@ -66,8 +67,12 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'edxapp',
+        'USER': 'admin',
+        'PASSWORD': '0000',
+        'HOST': 'secret.db',
+        'PORT': '3306',
     }
 }
 
