@@ -1,10 +1,12 @@
 from rest_framework.generics import CreateAPIView
 from .serializers import JwtSerializer
 from rest_framework.response import Response
+from django.core.exceptions import ObjectDoesNotExist
 
 from api.models import AuthUser
 
 import jwt
+import json
 
 class JwtViews(CreateAPIView):
 
@@ -12,15 +14,17 @@ class JwtViews(CreateAPIView):
 
     def create(self, request):
         
-        print(AuthUser.objects.get(email='honor@example.com'))
+        req = json.loads(request.body)['payload']
 
-        id = 'hello'
-        pw = '123'
+        email = req['email']
+        password = req['password']
 
-        payload = {}
-        payload['id'] = id
-        payload['pw'] = pw
-
-        jwt_token = jwt.encode(payload, "helloworld")
-
-        return Response({"token": jwt_token})
+        try:
+            o1 = AuthUser.objects.get(email=email)
+            payload = {}
+            payload['email'] = email
+            payload['password'] = password
+            jwt_token = jwt.encode(payload, "helloworld")
+            return Response({"token": jwt_token})
+        except ObjectDoesNotExist:
+            return Response({"token": 'fail'})
