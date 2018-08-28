@@ -1,7 +1,7 @@
 .sidebar-container{
     border: 1px solid black;
     min-height: calc(100vh - 3.5rem);
-    background-color: #19222d;
+    background-color: black;
     width: 14rem;
     display: block;
     -ms-flex-negative: 0;
@@ -22,6 +22,11 @@
 .sidebar-menu{
   color: #ffffff;
 }
+
+a {color: inherit;}      /* unvisited link */
+a:visited {color: inherit;}  /* visited link */
+a:hover {color: inherit;}  /* mouse over link */
+a:active {color: inherit;}  /* selected link */
 
 .sidebar-menu ul{
   list-style: none;

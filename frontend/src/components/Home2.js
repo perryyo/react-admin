@@ -4,7 +4,7 @@ import { Switch, Route } from 'react-router-dom';
 import Header from './Header';
 import SideBar from './SideBar';
 
-import Content from './Content';
+import Hello from './Hello';
 
 import '../public/Home/Home.css';
 
@@ -15,7 +15,7 @@ class Home extends Component {
         <Header />
         <div className="home-container">
           <SideBar />
-          <Content />
+          <Hello />
         </div>
       </div>
     );

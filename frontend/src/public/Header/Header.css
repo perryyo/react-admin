@@ -1,6 +1,6 @@
 .header-container {
     height: 60px;
-    background-color: #23364a;
+    background-color:#201d1d;
     position: fixed;
     z-index: 1040;
     left: 0;
@@ -12,8 +12,8 @@
 }
 
 .header-logo {
-    width: 200px;
-    padding: 16px;
+    width: 102px;
+    margin-left: 15px;
 }
 
 .header-right-menu{
